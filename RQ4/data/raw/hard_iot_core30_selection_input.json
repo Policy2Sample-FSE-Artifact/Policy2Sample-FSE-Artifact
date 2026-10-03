@@ -1,0 +1,1128 @@
+{
+  "title": "Hard-IoT Core 30 structural selection",
+  "selection_seed": 20260930,
+  "selection_source": "safedomain_fse/outputs/hard_iot_complexity_2026-09-29/preflight.json",
+  "selection_source_scope": "frozen 96-case preflight metadata only; no model outcomes loaded",
+  "excluded": [
+    "separate B=700 diagnostic case",
+    "all model outputs and method outcome fields"
+  ],
+  "quotas": {
+    "family": {
+      "C1": 4,
+      "C2": 6,
+      "C3": 8,
+      "C4": 12
+    },
+    "rho_bin": {
+      "loose": 10,
+      "medium": 10,
+      "tight": 10
+    },
+    "target_type": {
+      "safe": 15,
+      "unsafe_but_feasible": 15
+    }
+  },
+  "observed": {
+    "n": 30,
+    "family_counts": {
+      "C1": 4,
+      "C2": 6,
+      "C3": 8,
+      "C4": 12
+    },
+    "rho_counts": {
+      "loose": 10,
+      "medium": 10,
+      "tight": 10
+    },
+    "target_counts": {
+      "safe": 15,
+      "unsafe_but_feasible": 15
+    },
+    "c4_empty_mode_branch_cases": 4,
+    "c4_branch_feasible_controls": 8,
+    "c4_empty_branch_ids": [
+      "C4-TIGHT-17",
+      "C4-TIGHT-18",
+      "C4-TIGHT-19",
+      "C4-TIGHT-20"
+    ],
+    "family_selection_diversity_score": {
+      "C1": 357,
+      "C2": 339,
+      "C3": 339,
+      "C4": 110
+    }
+  },
+  "selection_note": "The requested 8/12 C4 empty-branch target is impossible in the frozen 96-case pool: preflight contains only four C4 cases with an oracle-empty mode branch. All four are retained; the other eight C4 cases are branch-feasible controls. No cases or policies were altered.",
+  "cases": [
+    {
+      "case_id": "C1-LOOSE-08",
+      "family": "C1",
+      "rho_bin": "loose",
+      "rho": 0.5370370370370371,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "normal",
+        0,
+        80,
+        100,
+        60
+      ],
+      "context": {
+        "budget": 1180,
+        "window": "open",
+        "grid": "constrained",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load"
+      ],
+      "safe_domain_size": 2088,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C1 / loose / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C1-MEDIUM-15",
+      "family": "C1",
+      "rho_bin": "medium",
+      "rho": 0.3726851851851852,
+      "target_type": "safe",
+      "target": [
+        "boost",
+        40,
+        20,
+        60,
+        0
+      ],
+      "context": {
+        "budget": 1000,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load"
+      ],
+      "safe_domain_size": 1449,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C1 / medium / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C1-TIGHT-21",
+      "family": "C1",
+      "rho_bin": "tight",
+      "rho": 0.14660493827160495,
+      "target_type": "safe",
+      "target": [
+        "normal",
+        40,
+        0,
+        60,
+        0
+      ],
+      "context": {
+        "budget": 700,
+        "window": "open",
+        "grid": "constrained",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load"
+      ],
+      "safe_domain_size": 570,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C1 / tight / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C1-TIGHT-22",
+      "family": "C1",
+      "rho_bin": "tight",
+      "rho": 0.19675925925925927,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        40,
+        60,
+        40,
+        100
+      ],
+      "context": {
+        "budget": 780,
+        "window": "closed",
+        "grid": "constrained",
+        "water_temp_c": 55
+      },
+      "active_constraints": [
+        "shared_budget_joint_load"
+      ],
+      "safe_domain_size": 765,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C1 / tight / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-LOOSE-06",
+      "family": "C2",
+      "rho_bin": "loose",
+      "rho": 0.49691358024691357,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "normal",
+        60,
+        40,
+        40,
+        80
+      ],
+      "context": {
+        "budget": 1780,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap"
+      ],
+      "safe_domain_size": 1932,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / loose / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-LOOSE-07",
+      "family": "C2",
+      "rho_bin": "loose",
+      "rho": 0.6458333333333334,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        100,
+        40,
+        40,
+        40
+      ],
+      "context": {
+        "budget": 1300,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load"
+      ],
+      "safe_domain_size": 2511,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / loose / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-MEDIUM-13",
+      "family": "C2",
+      "rho_bin": "medium",
+      "rho": 0.33101851851851855,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        60,
+        60,
+        20,
+        40
+      ],
+      "context": {
+        "budget": 1780,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hot_water_heater_cap"
+      ],
+      "safe_domain_size": 1287,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / medium / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-MEDIUM-14",
+      "family": "C2",
+      "rho_bin": "medium",
+      "rho": 0.3333333333333333,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "eco",
+        100,
+        100,
+        100,
+        80
+      ],
+      "context": {
+        "budget": 2060,
+        "window": "closed",
+        "grid": "constrained",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "constrained_grid_ev_cap"
+      ],
+      "safe_domain_size": 1296,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / medium / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-TIGHT-18",
+      "family": "C2",
+      "rho_bin": "tight",
+      "rho": 0.1111111111111111,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "normal",
+        60,
+        60,
+        20,
+        40
+      ],
+      "context": {
+        "budget": 2020,
+        "window": "closed",
+        "grid": "constrained",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "constrained_grid_ev_cap",
+        "hot_water_heater_cap"
+      ],
+      "safe_domain_size": 432,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / tight / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C2-TIGHT-19",
+      "family": "C2",
+      "rho_bin": "tight",
+      "rho": 0.13580246913580246,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        40,
+        0,
+        0,
+        20
+      ],
+      "context": {
+        "budget": 880,
+        "window": "open",
+        "grid": "constrained",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "constrained_grid_ev_cap"
+      ],
+      "safe_domain_size": 528,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C2 / tight / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-LOOSE-01",
+      "family": "C3",
+      "rho_bin": "loose",
+      "rho": 0.4799382716049383,
+      "target_type": "safe",
+      "target": [
+        "boost",
+        80,
+        0,
+        60,
+        40
+      ],
+      "context": {
+        "budget": 1120,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1866,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / loose / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-LOOSE-03",
+      "family": "C3",
+      "rho_bin": "loose",
+      "rho": 0.4567901234567901,
+      "target_type": "safe",
+      "target": [
+        "normal",
+        20,
+        0,
+        0,
+        40
+      ],
+      "context": {
+        "budget": 1660,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1776,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / loose / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-LOOSE-08",
+      "family": "C3",
+      "rho_bin": "loose",
+      "rho": 0.4583333333333333,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "eco",
+        100,
+        40,
+        80,
+        80
+      ],
+      "context": {
+        "budget": 2120,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1782,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / loose / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-MEDIUM-10",
+      "family": "C3",
+      "rho_bin": "medium",
+      "rho": 0.32407407407407407,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        0,
+        60,
+        100,
+        40
+      ],
+      "context": {
+        "budget": 2100,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hot_water_heater_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1260,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / medium / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-MEDIUM-12",
+      "family": "C3",
+      "rho_bin": "medium",
+      "rho": 0.32407407407407407,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "eco",
+        100,
+        40,
+        40,
+        100
+      ],
+      "context": {
+        "budget": 1980,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 55
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hot_water_heater_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1260,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / medium / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-MEDIUM-13",
+      "family": "C3",
+      "rho_bin": "medium",
+      "rho": 0.26774691358024694,
+      "target_type": "safe",
+      "target": [
+        "normal",
+        20,
+        0,
+        80,
+        0
+      ],
+      "context": {
+        "budget": 1100,
+        "window": "closed",
+        "grid": "constrained",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "constrained_grid_ev_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 1041,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / medium / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-TIGHT-17",
+      "family": "C3",
+      "rho_bin": "tight",
+      "rho": 0.10802469135802469,
+      "target_type": "safe",
+      "target": [
+        "boost",
+        80,
+        20,
+        0,
+        0
+      ],
+      "context": {
+        "budget": 1200,
+        "window": "closed",
+        "grid": "constrained",
+        "water_temp_c": 60
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "constrained_grid_ev_cap",
+        "hot_water_heater_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 420,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / tight / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C3-TIGHT-24",
+      "family": "C3",
+      "rho_bin": "tight",
+      "rho": 0.16666666666666666,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        40,
+        40,
+        100,
+        60
+      ],
+      "context": {
+        "budget": 2000,
+        "window": "open",
+        "grid": "constrained",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "constrained_grid_ev_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling"
+      ],
+      "safe_domain_size": 648,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C3 / tight / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-LOOSE-02",
+      "family": "C4",
+      "rho_bin": "loose",
+      "rho": 0.45601851851851855,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "eco",
+        60,
+        100,
+        100,
+        40
+      ],
+      "context": {
+        "budget": 1720,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1773,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / loose / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-LOOSE-03",
+      "family": "C4",
+      "rho_bin": "loose",
+      "rho": 0.4750514403292181,
+      "target_type": "safe",
+      "target": [
+        "normal",
+        100,
+        40,
+        20,
+        60
+      ],
+      "context": {
+        "budget": 2160,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1847,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / loose / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-LOOSE-07",
+      "family": "C4",
+      "rho_bin": "loose",
+      "rho": 0.4750514403292181,
+      "target_type": "safe",
+      "target": [
+        "normal",
+        80,
+        60,
+        80,
+        0
+      ],
+      "context": {
+        "budget": 2120,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1847,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / loose / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-LOOSE-08",
+      "family": "C4",
+      "rho_bin": "loose",
+      "rho": 0.463477366255144,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        80,
+        40,
+        0,
+        60
+      ],
+      "context": {
+        "budget": 1780,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1802,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / loose / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-MEDIUM-09",
+      "family": "C4",
+      "rho_bin": "medium",
+      "rho": 0.3449074074074074,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        20,
+        40,
+        20,
+        20
+      ],
+      "context": {
+        "budget": 1320,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1341,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / medium / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-MEDIUM-10",
+      "family": "C4",
+      "rho_bin": "medium",
+      "rho": 0.3369341563786008,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        60,
+        100,
+        60,
+        60
+      ],
+      "context": {
+        "budget": 1300,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1310,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / medium / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-MEDIUM-11",
+      "family": "C4",
+      "rho_bin": "medium",
+      "rho": 0.2821502057613169,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        0,
+        0,
+        40,
+        40
+      ],
+      "context": {
+        "budget": 1180,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1097,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / medium / safe target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-MEDIUM-14",
+      "family": "C4",
+      "rho_bin": "medium",
+      "rho": 0.3533950617283951,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "normal",
+        100,
+        100,
+        20,
+        100
+      ],
+      "context": {
+        "budget": 1340,
+        "window": "closed",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 1374,
+      "safe_mode_set": [
+        "eco",
+        "normal",
+        "boost"
+      ],
+      "empty_mode_branches": [],
+      "has_oracle_empty_mode_branch": false,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / medium / unsafe-but-feasible target / branch-feasible control"
+    },
+    {
+      "case_id": "C4-TIGHT-17",
+      "family": "C4",
+      "rho_bin": "tight",
+      "rho": 0.12268518518518519,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        20,
+        20,
+        20,
+        20
+      ],
+      "context": {
+        "budget": 960,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 477,
+      "safe_mode_set": [
+        "eco",
+        "normal"
+      ],
+      "empty_mode_branches": [
+        "boost"
+      ],
+      "has_oracle_empty_mode_branch": true,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / tight / safe target / oracle-confirmed empty mode branch"
+    },
+    {
+      "case_id": "C4-TIGHT-18",
+      "family": "C4",
+      "rho_bin": "tight",
+      "rho": 0.15020576131687244,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        100,
+        80,
+        40,
+        80
+      ],
+      "context": {
+        "budget": 1080,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 584,
+      "safe_mode_set": [
+        "eco",
+        "normal"
+      ],
+      "empty_mode_branches": [
+        "boost"
+      ],
+      "has_oracle_empty_mode_branch": true,
+      "target_enters_empty_mode_branch": true,
+      "selection_reason": "C4 / tight / unsafe-but-feasible target / oracle-confirmed empty mode branch"
+    },
+    {
+      "case_id": "C4-TIGHT-19",
+      "family": "C4",
+      "rho_bin": "tight",
+      "rho": 0.11754115226337448,
+      "target_type": "safe",
+      "target": [
+        "eco",
+        20,
+        80,
+        40,
+        0
+      ],
+      "context": {
+        "budget": 940,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 45
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 457,
+      "safe_mode_set": [
+        "eco",
+        "normal"
+      ],
+      "empty_mode_branches": [
+        "boost"
+      ],
+      "has_oracle_empty_mode_branch": true,
+      "target_enters_empty_mode_branch": false,
+      "selection_reason": "C4 / tight / safe target / oracle-confirmed empty mode branch"
+    },
+    {
+      "case_id": "C4-TIGHT-20",
+      "family": "C4",
+      "rho_bin": "tight",
+      "rho": 0.19315843621399176,
+      "target_type": "unsafe_but_feasible",
+      "target": [
+        "boost",
+        20,
+        40,
+        20,
+        0
+      ],
+      "context": {
+        "budget": 1320,
+        "window": "open",
+        "grid": "normal",
+        "water_temp_c": 50
+      },
+      "active_constraints": [
+        "shared_budget_joint_load",
+        "open_window_hvac_cap",
+        "hvac_dehumidifier_coupling",
+        "ev_water_heater_coupling",
+        "mode_conditional_limits"
+      ],
+      "safe_domain_size": 751,
+      "safe_mode_set": [
+        "eco",
+        "normal"
+      ],
+      "empty_mode_branches": [
+        "boost"
+      ],
+      "has_oracle_empty_mode_branch": true,
+      "target_enters_empty_mode_branch": true,
+      "selection_reason": "C4 / tight / unsafe-but-feasible target / oracle-confirmed empty mode branch"
+    }
+  ]
+}
