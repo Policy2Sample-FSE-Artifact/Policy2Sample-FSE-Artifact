@@ -1,0 +1,7 @@
+domain,method,n,mean_latency_ms,p50_latency_ms,p95_latency_ms,mean_output_tokens,p50_output_tokens,p95_output_tokens,paired_mean_delta_ms,paired_p50_delta_ms,paired_p95_delta_ms,relative_mean_overhead_pct
+robot,schema_only,150,707.8490470066666,758.2708725,780.58000825,41.9,46.0,46.0,,,,
+robot,policy2sample,150,741.2846742266667,780.071318,867.3199865999997,41.9,46.0,46.0,,,,
+robot,paired_delta_policy2sample_minus_schema_only,150,,,,,,,33.43562722,13.854341999999974,110.16961504999993,4.723553328409738
+iot,schema_only,150,422.88767972666665,422.7764535,440.95550099999997,28.0,28.0,28.0,,,,
+iot,policy2sample,150,506.88118367333334,508.574751,533.9210524,33.5,33.5,34.0,,,,
+iot,paired_delta_policy2sample_minus_schema_only,150,,,,,,,83.99350394666666,84.03410499999998,107.56867744999992,19.86189429802161
