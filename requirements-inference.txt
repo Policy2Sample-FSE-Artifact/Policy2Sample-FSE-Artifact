@@ -1,0 +1,3 @@
+# Optional: only needed to rerun Qwen inference, not to inspect or aggregate results.
+numpy>=1.26
+llama-cpp-python>=0.3

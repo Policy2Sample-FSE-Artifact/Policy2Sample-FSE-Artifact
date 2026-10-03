@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+*.gguf
+.DS_Store
+.env

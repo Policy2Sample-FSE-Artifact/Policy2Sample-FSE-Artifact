@@ -1,0 +1,2 @@
+# Offline aggregation and report regeneration use only Python's standard library.
+# Python 3.10 or later is recommended.
