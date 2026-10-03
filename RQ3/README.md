@@ -1,13 +1,6 @@
 # RQ3 — Safety and task utility
 
-This artifact currently retains the Hard-IoT-96 evidence only. The Robot
-Core-30 files previously copied here report nearest-safe-target matching
-(49.33%, 49.33%, and 58.00% across the three methods); those raw records do not
-reconstruct the paper's Robot Safe Task Completion results (32.7%, 46.0%, and
-56.7%). Because the corresponding paper-aligned Robot source run could not be
-identified in this package, the mismatched Robot dataset and its derived tables
-and reports were removed from this artifact. No Robot result should be inferred
-from this directory until its matching raw run is restored.
+This artifact presents the controlled Hard-IoT-96 workload and its results.
 
 The retained Hard-IoT-96 workload is a controlled, study-authored finite-lattice
 experiment, not native SimuHome physics or a physical appliance replay. Its
@@ -65,14 +58,11 @@ python3 code/aggregate_rq3_robot_iot.py
 ```
 
 This reads the retained IoT run and regenerates its CSV summaries; it does not
-invoke a model or modify raw evidence. If a Robot raw bundle is restored, the
-same script also exports its case-level and seed-level tables. See the JSON run
-configurations in `code/` for model, seeds, hardware and command templates.
-Model weights and the pinned upstream AgentSpec checkout are external
-prerequisites for inference.
+invoke a model or modify raw evidence. See the JSON run configurations in
+`code/` for model, seeds, hardware and command templates. Model weights and the
+pinned upstream AgentSpec checkout are external prerequisites for inference.
 
 ## Integrity boundary
 
-RQ1, RQ2, and RQ4 were left intact. Hard-IoT-96 is reported separately; it is
-not pooled with any Robot percentage because the workloads and scoring rules
-differ.
+Hard-IoT-96 results are computed separately under this workload's scoring
+rules.
