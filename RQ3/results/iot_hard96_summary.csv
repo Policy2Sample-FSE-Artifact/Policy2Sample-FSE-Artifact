@@ -1,0 +1,5 @@
+method,n,first_admissible,final_admissible,task_success,unsafe_proposals,dead_end_first_proposal,mean_repairs,mean_model_calls,mean_latency_ms
+prompt_only,96,69,69,63,27,27,0,1,1302.8384469168184
+schema_only,96,70,70,63,26,26,0,1,1370.4574903822504
+agentspec,96,70,90,77,44,26,0.3958333333333333,1.3958333333333333,1941.211565795432
+policy2sample,96,96,96,88,0,0,0,1,1362.3761355896324
