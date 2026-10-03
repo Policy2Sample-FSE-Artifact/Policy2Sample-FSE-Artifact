@@ -1,0 +1,17 @@
+{
+  "benchmark": "Hard-IoT structural-complexity workload",
+  "run_date": "2026-09-29",
+  "status": "study-authored abstract-load workload; exploratory evidence, not native SimuHome or physical appliance replay",
+  "cases": 96,
+  "stratification": "4 complexity levels C1-C4 x 3 admissible-domain-retention bins (loose/medium/tight) x 8 cases per cell",
+  "methods": ["prompt_only", "schema_only", "agentspec", "policy2sample"],
+  "model": "Qwen3-VL-32B-Instruct-Q8_0 GGUF",
+  "decoding": "greedy argmax, temperature 0, fixed seed 20260929",
+  "action_space_size": 3888,
+  "agent_spec_repair_budget": 2,
+  "max_generations": 3,
+  "hardware": "Remote host used 2x NVIDIA RTX 3090 (24 GB each), Intel Xeon Gold 6226R, 125 GiB RAM; host identifiers omitted.",
+  "command_template": "RQ3_SYSTEM_Z3=1 python3 code/hard_iot_complexity_experiment.py --model 32b --output <output-json>",
+  "dependencies": ["numpy", "z3-solver", "Qwen3-VL-capable llama-cpp-python"],
+  "note": "Power/energy terms are study-authored abstract load units, not measured wattage. One B=700 BOOST prefix-dead-end diagnostic is included in the raw JSON but excluded from the 96-case main analysis."
+}

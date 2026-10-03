@@ -1,0 +1,20 @@
+{
+  "benchmark": "Robot Shared-Workspace Mobile Manipulator Core-30",
+  "run_dates": "2026-09-29 to 2026-09-30 (five paired seeds)",
+  "status": "controlled finite-lattice experiment; exploratory evidence, not physical simulator replay",
+  "model": "Qwen3-VL-32B-Instruct-Q8_0 GGUF",
+  "temperature": 0.2,
+  "seeds": [20260930, 20261001, 20261002, 20261003, 20261004],
+  "cases_per_seed": 30,
+  "methods": ["prompt_only", "agentspec_llm_self_examine", "policy2sample"],
+  "action_lattice_size_including_stop": 6001,
+  "paired_sampling_seed": "seed + case_index * 1009",
+  "agentspec": {
+    "upstream_commit": "e6fa3902e2cfb9681f454b355691b771f70543f8",
+    "mode": "llm_self_reflect (described in paper/README as llm_self_examine)",
+    "budget": "one initial candidate plus up to four reflections; at most five generations"
+  },
+  "hardware": "Remote host used 2x NVIDIA RTX 3090 (24 GB each), Intel Xeon Gold 6226R, 125 GiB RAM; host identifiers omitted.",
+  "command_template": "RQ3_SYSTEM_Z3=1 python3 code/robot_core30_compound_experiment.py --case-file data/raw/robot_core30/robot_core30_preflight.json --agentspec-src <path-to-AgentSpec-at-pinned-commit> --model-path <path-to-Qwen3-VL-32B-GGUF> --seed <seed> --temperature 0.2 --output <output-json>",
+  "note": "The archived five-seed outputs are the reported evidence. The runner is retained for reproducibility; inference requires the pinned upstream AgentSpec checkout, llama-cpp-python build, and model weights."
+}
