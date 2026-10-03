@@ -2,16 +2,14 @@
 
 This artifact presents the controlled Hard-IoT-96 workload and its results.
 
-The retained Hard-IoT-96 workload is a controlled, study-authored finite-lattice
-experiment, not native SimuHome physics or a physical appliance replay. Its
-energy coefficients are abstract load units. Treat it as controlled mechanism
-evidence, not measured deployment success.
+Hard-IoT-96 uses a study-authored finite action lattice and abstract energy
+coefficients (`6h + 4d + 5w + 8e ≤ B`) to compare the four methods under a
+controlled workload.
 
 ## Hard-IoT-96 structural-complexity workload
 
 - Qwen3-VL-32B-Instruct-Q8_0, greedy decoding, temperature 0, fixed seed
-  20260929; run 2026-09-29; 96 main cases × four methods = 384
-  method/case rows.
+  20260929; run 2026-09-29; 96 main cases × four methods = 384 method/case rows.
 - 24 cases each in C1–C4, crossed with loose/medium/tight admissible-domain
   retention bins (8 cases per cell). The complete discrete action space has
   3,888 candidates.
@@ -27,10 +25,7 @@ evidence, not measured deployment success.
 | AgentSpec | 70/96 (72.9%) | 90/96 (93.8%) | 77/96 (80.2%) | 1.40 | 1941.2 ms |
 | Policy2Sample | 96/96 (100%) | 96/96 (100%) | 88/96 (91.7%) | 1.00 | 1362.4 ms |
 
-The energy model is a study-authored abstraction (`6h + 4d + 5w + 8e ≤ B`),
-not measured appliance wattage. This workload was not run in SimuHome, AI2-THOR,
-or on physical devices. It supports a controlled mechanism comparison only;
-do not describe it as real-home success or as an empirical complexity law.
+The energy model uses study-authored abstract load units.
 
 Files:
 
@@ -61,8 +56,3 @@ This reads the retained IoT run and regenerates its CSV summaries; it does not
 invoke a model or modify raw evidence. See the JSON run configurations in
 `code/` for model, seeds, hardware and command templates. Model weights and the
 pinned upstream AgentSpec checkout are external prerequisites for inference.
-
-## Integrity boundary
-
-Hard-IoT-96 results are computed separately under this workload's scoring
-rules.
