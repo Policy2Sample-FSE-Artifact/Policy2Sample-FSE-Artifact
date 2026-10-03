@@ -1,0 +1,11 @@
+﻿model,method,safe_actions,total_cases,unsafe_outputs,no_action,max_permitted_speed_hits,mean_calls,mean_latency_ms,result_source,status
+2B,Prompt-only,2,33,31,0,2,1.00,327.6,results_moving_narrow_window_2b.json,paper-reported controlled result
+2B,Policy2Sample,33,33,0,0,23,1.00,318.1,results_moving_narrow_window_2b.json,paper-reported controlled result
+2B,AgentSpec (3-call setting),14,33,0,19,8,2.67,865.8,results_agentspec_budget3_2b.json,paper-reported controlled result
+4B,Prompt-only,2,33,31,0,2,1.00,452.5,results_moving_narrow_window_4b.json,paper-reported controlled result
+4B,Policy2Sample,33,33,0,0,28,1.00,442.6,results_moving_narrow_window_4b.json,paper-reported controlled result
+4B,AgentSpec (3-call setting),23,33,0,10,13,2.55,1155.7,results_agentspec_budget3_4b.json,paper-reported controlled result
+8B,Prompt-only,2,33,31,0,2,1.00,619.4,results_moving_narrow_window_8b.json,paper-reported controlled result
+8B,Policy2Sample,33,33,0,0,27,1.00,607.5,results_moving_narrow_window_8b.json,paper-reported controlled result
+8B,AgentSpec (3-call setting),26,33,0,7,18,2.48,1557.0,results_agentspec_budget3_8b.json,paper-reported controlled result
+2B,AgentSpec (20-call sensitivity),33,33,0,0,20,4.55,1493.7,results_agentspec_budget20_2b.json,paper-reported controlled result
