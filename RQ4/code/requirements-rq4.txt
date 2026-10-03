@@ -1,0 +1,3 @@
+numpy>=1.26
+xgrammar
+llama-cpp-python==0.3.33

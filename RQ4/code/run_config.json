@@ -1,0 +1,42 @@
+{
+  "experiment": "RQ4 full-action latency: XGrammar canonical-lattice baseline vs Policy2Sample",
+  "model_alias": "Qwen3-VL-8B-Instruct-Q8_0",
+  "model_sha256": "0d264b3941185d00a74f75c4245521dae088ff1efc90ab8d1754e83f5844adb0",
+  "decode": {
+    "temperature": 0.0,
+    "selection": "greedy argmax among allowed token IDs",
+    "repetitions_per_case_method": 5,
+    "warmups_per_domain_method": 1,
+    "paired_order": "alternated by case index and repetition"
+  },
+  "workload": {
+    "robot_input": "data/raw/robot_core30_v2_frozen_input.json",
+    "iot_input": "data/raw/hard_iot_core30_selection_input.json",
+    "cases_per_domain": 30,
+    "robot_move_lattice_size": 6000,
+    "robot_stop_lattice_size": 1,
+    "iot_lattice_size": 3888
+  },
+  "runtime": {
+    "n_ctx": 4096,
+    "n_batch": 512,
+    "n_ubatch": 128,
+    "n_gpu_layers": -1,
+    "tensor_split": "0.45,0.55",
+    "llama_cpp_python": "0.3.33",
+    "xgrammar_version_recorded": "unknown"
+  },
+  "timing_boundary": "Per-request setup and P2S specialization through prompt prefill, constrained decode, and JSON parse. Excludes model loading, vocabulary extraction, grammar compilation, and global action-lattice tokenization.",
+  "methods": {
+    "schema_only": "XGrammar structural mask intersected with once-compiled canonical trie for the full finite action lattice; no safety filtering.",
+    "policy2sample": "Same XGrammar grammar with per-request safe-domain prefix mask; projection, safe candidate serialization, and prefix trie construction are included in timed latency."
+  },
+  "invocation_template_from_RQ4_directory": "python3 code/remote_rq4_e2e_latency_8b.py --model /path/to/Qwen3VL-8B-Instruct-Q8_0.gguf --robot-cases data/raw/robot_core30_v2_frozen_input.json --iot-cases data/raw/hard_iot_core30_selection_input.json --vocab-cache /path/to/qwen_vocab_cache.pkl --output data/raw/reproduced.json --repetitions 5 --warmups 1 --tensor-split 0.45,0.55",
+  "privacy_redactions_in_archived_result": ["remote model_path", "remote hostname"],
+  "limitations": [
+    "Finite discrete action lattice; not continuous numeric token enforcement.",
+    "No simulator or physical hardware replay in this latency experiment.",
+    "IoT output token count differs between methods because selected action values differ; E2E delta is not pure mask overhead.",
+    "The archived XGrammar runtime version could not be recovered from the result metadata and is recorded as unknown."
+  ]
+}
