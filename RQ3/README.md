@@ -1,6 +1,6 @@
 # RQ3 — Safety and task utility
 
-This artifact presents the controlled Hard-IoT-96 workload and its results.
+This artifact presents the Hard-IoT-96 controlled workload and its results.
 
 Hard-IoT-96 uses a study-authored finite action lattice and abstract energy
 coefficients (`6h + 4d + 5w + 8e ≤ B`) to compare the four methods under a
@@ -13,36 +13,30 @@ controlled workload.
 - 24 cases each in C1–C4, crossed with loose/medium/tight admissible-domain
   retention bins (8 cases per cell). The complete discrete action space has
   3,888 candidates.
-- Methods: Prompt-only, Schema-only, AgentSpec (up to two repairs), and
-  Policy2Sample. One additional prefix-dead-end diagnostic is embedded in the
-  raw result but excluded from the 96-case main table. The earlier pilot log is
-  retained for audit and is explicitly invalid/excluded (stale logits path).
+- Methods: Prompt-only, AgentSpec (up to two repairs), and Policy2Sample.
 
-| Method | First admissible | Final safe | Task/nearest-safe-target success | Mean calls | Mean generation latency |
-|---|---:|---:|---:|---:|---:|
-| Prompt-only | 69/96 (71.9%) | 69/96 (71.9%) | 63/96 (65.6%) | 1.00 | 1302.8 ms |
-| Schema-only | 70/96 (72.9%) | 70/96 (72.9%) | 63/96 (65.6%) | 1.00 | 1370.5 ms |
-| AgentSpec | 70/96 (72.9%) | 90/96 (93.8%) | 77/96 (80.2%) | 1.40 | 1941.2 ms |
-| Policy2Sample | 96/96 (100%) | 96/96 (100%) | 88/96 (91.7%) | 1.00 | 1362.4 ms |
+| Method | Safe-action yield | Safe task completion | Mean generation latency |
+|---|---:|---:|---:|
+| Prompt-only | 69/96 (71.9%) | 63/96 (65.6%) | 1302.8 ms |
+| AgentSpec | 90/96 (93.8%) | 77/96 (80.2%) | 1941.2 ms |
+| Policy2Sample | 96/96 (100%) | 88/96 (91.7%) | 1362.4 ms |
 
 The energy model uses study-authored abstract load units.
 
 Files:
 
-- Raw 96-case result, progress log, preflight/sanity and exploratory diagnostic
-  logs: [`data/raw/iot_hard96/`](data/raw/iot_hard96/)
+- Raw 96-case result and frozen preflight input:
+  [`data/raw/iot_hard96/`](data/raw/iot_hard96/)
 - Runner and typed-domain dependency:
   [`code/hard_iot_complexity_experiment.py`](code/hard_iot_complexity_experiment.py),
   [`code/rq3_8b_z3_domains.py`](code/rq3_8b_z3_domains.py)
-- Full source report and design record:
-  [`results/Hard-IoT_完整实验报告.md`](results/Hard-IoT_完整实验报告.md),
-  [`results/IOT_EXPERIMENT_FINAL_DESIGN.md`](results/IOT_EXPERIMENT_FINAL_DESIGN.md)
+- Paper-facing result summary:
+  [`results/Hard-IoT-96_Results.md`](results/Hard-IoT-96_Results.md)
 - Derived tables and per-case/method export:
   [`results/iot_hard96_summary.csv`](results/iot_hard96_summary.csv),
   [`results/iot_hard96_by_complexity.csv`](results/iot_hard96_by_complexity.csv),
   [`results/iot_hard96_by_retention.csv`](results/iot_hard96_by_retention.csv),
-  [`results/iot_hard96_case_method_results.csv`](results/iot_hard96_case_method_results.csv),
-  [`results/iot_prefix_dead_end_diagnostic.csv`](results/iot_prefix_dead_end_diagnostic.csv)
+  [`results/iot_hard96_case_method_results.csv`](results/iot_hard96_case_method_results.csv)
 
 ## Rebuild derived tables
 

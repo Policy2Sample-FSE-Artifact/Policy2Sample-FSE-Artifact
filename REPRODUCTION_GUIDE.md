@@ -4,10 +4,11 @@ This guide maps the evaluation claims to the included evidence and gives offline
 
 | Paper claim | Included data | Rebuild / inspect |
 |---|---|---|
-| **RQ1, Table 1:** 54/55 Contracts validate; 47/50 emitted actions are source-safe; 47/54 masks match the source-rule catalog | `RQ1/data/rq1b_final_eval_input_55_2026-09-24.jsonl`; contributing raw runs in `RQ1/data/raw/` | `cd RQ1 && python3 code/aggregate_rq1_true_e2e_55case.py`; inspect `RQ1/results/rq1_true_e2e_8b_55case_merged.json` and `rq1_true_e2e_8b_55case_rows.csv` |
-| **RQ2, Fig. 5:** safe-action yield by model size and retry budget | `RQ2/data/raw/results_moving_narrow_window_{2b,4b,8b}.json`; dedicated `results_agentspec_budget3_{2b,4b,8b}.json`; 2B budget-20 sensitivity file | `cd RQ2 && python3 code/aggregate_rq2_summary.py`; inspect `RQ2/results/rq2_moving_narrow_window_summary.csv` and `RQ2/results/RQ2_MOVING_NARROW_WINDOW_REPORT.md` |
-| **RQ3, Fig. 6:** IoT-96 STC of 65.6%, 80.2%, and 91.7% | `RQ3/data/raw/iot_hard96/hard_iot_complexity_32b_20260929_v2.json` | `cd RQ3 && python3 code/aggregate_rq3_robot_iot.py`; inspect `RQ3/results/iot_hard96_summary.csv` and `RQ3/results/Hard-IoT_完整实验报告.md` |
-| **RQ4, Fig. 7:** Robot and IoT latency overhead and preprocessing cost | `RQ4/data/raw/final_5reps_v3.json`; frozen inputs in `RQ4/data/raw/` | `cd RQ4 && python3 code/aggregate_rq4_latency.py`; inspect `RQ4/results/rq4_e2e_latency_summary.csv` and `RQ4/results/RQ4_E2E_LATENCY_8B_FULL_REPORT.md` |
+| **RQ1:** 55-policy Qwen3-VL-8B validation, one-emission source-safety, and exact catalog-match results | `RQ1/data/rq1b_final_eval_input_55_2026-09-24.jsonl`; contributing raw runs in `RQ1/data/raw/` | `cd RQ1 && python3 code/aggregate_rq1_true_e2e_55case.py`; inspect `RQ1/results/rq1_true_e2e_8b_55case_merged.json` and `rq1_true_e2e_8b_55case_rows.csv` |
+| **RQ2, Fig. 5:** safe-action yield by model size and generation budget | `RQ2/data/raw/results_moving_narrow_window_{2b,4b,8b}.json`; dedicated `results_agentspec_budget3_{2b,4b,8b}.json`; 2B budget-20 sensitivity file | `cd RQ2 && python3 code/aggregate_rq2_summary.py`; inspect `RQ2/results/rq2_moving_narrow_window_summary.csv` and `RQ2/results/RQ2_MOVING_NARROW_WINDOW_REPORT.md` |
+| **RQ3, Fig. 6 (Hard-IoT-96):** safe-action yield and task completion | `RQ3/data/raw/iot_hard96/hard_iot_complexity_32b_20260929_v2.json` | `cd RQ3 && python3 code/aggregate_rq3_robot_iot.py`; inspect `RQ3/results/iot_hard96_summary.csv` and `RQ3/results/Hard-IoT-96_Results.md` |
+| **RQ4, Fig. 7:** request-level Robot and IoT latency | `RQ4/data/raw/final_5reps_v3.json`; frozen inputs in `RQ4/data/raw/` | `cd RQ4 && python3 code/aggregate_rq4_latency.py`; inspect `RQ4/results/rq4_e2e_latency_summary.csv` |
+| **RQ4:** solver scaling and tokenizer-facing semantic-mask cost | `RQ4/data/raw/rq4_realizer_scaling_20260928.json`, `rq4_adapter_scaling_20260928.json`, and `rq4_qwen8b_tokenizer_mask_differential_20260928.json` | See `RQ4/README.md` for the three replay commands and the reported percentile fields. |
 
 ## Annotation provenance
 

@@ -96,7 +96,6 @@ def iot_exports() -> list[dict]:
         }
         (diagnostic_rows if r["diagnostic_case"] else case_rows).append(row)
     write_csv(OUT / "iot_hard96_case_method_results.csv", case_rows, list(case_rows[0]))
-    write_csv(OUT / "iot_prefix_dead_end_diagnostic.csv", diagnostic_rows, list(diagnostic_rows[0]))
 
     overall: list[dict] = []
     by_complexity: list[dict] = []

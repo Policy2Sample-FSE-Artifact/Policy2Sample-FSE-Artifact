@@ -25,7 +25,9 @@ Policy2Sample_FSE_Artifact/
 
 ## RQ3 scope
 
-Hard-IoT-96 is one greedy run on a controlled finite action lattice using study-authored abstract energy units. Its results characterize this controlled workload.
+The package includes the Hard-IoT-96 controlled finite-lattice results and the
+RQ4 request-level and component-level timing evidence. See the reproduction
+guide for the exact claim-to-data mapping and offline commands.
 
 ## Privacy and reuse
 
