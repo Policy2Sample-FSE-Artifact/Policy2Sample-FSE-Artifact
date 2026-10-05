@@ -1,0 +1,1809 @@
+{
+  "experiment": "rq2_fail_closed_failure_modes",
+  "n_each": 50,
+  "n_cases": 350,
+  "overall_accuracy": 1.0,
+  "by_kind": {
+    "contradictory_policy": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "AMBIGUOUS": 50
+      }
+    },
+    "empty_domain": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "EMPTY": 50
+      }
+    },
+    "invalid_prefix": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "INVALID": 50
+      }
+    },
+    "invalid_unit": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "INVALID": 50
+      }
+    },
+    "stale_context": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "STALE": 50
+      }
+    },
+    "unresolved_reference": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "INVALID": 50
+      }
+    },
+    "unsupported_nonlinear": {
+      "n": 50,
+      "accuracy": 1.0,
+      "observed": {
+        "UNSUPPORTED": 50
+      }
+    }
+  },
+  "rows": [
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "stale_context",
+      "expected": "STALE",
+      "observed": "STALE"
+    },
+    {
+      "kind": "invalid_unit",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unresolved_reference",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    },
+    {
+      "kind": "unsupported_nonlinear",
+      "expected": "UNSUPPORTED",
+      "observed": "UNSUPPORTED"
+    },
+    {
+      "kind": "contradictory_policy",
+      "expected": "AMBIGUOUS",
+      "observed": "AMBIGUOUS"
+    },
+    {
+      "kind": "empty_domain",
+      "expected": "EMPTY",
+      "observed": "EMPTY"
+    },
+    {
+      "kind": "invalid_prefix",
+      "expected": "INVALID",
+      "observed": "INVALID"
+    }
+  ]
+}

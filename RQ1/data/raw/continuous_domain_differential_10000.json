@@ -1,0 +1,55 @@
+{
+  "experiment": "continuous_ppdc_differential_correctness",
+  "seed": 20260916,
+  "queries": 10000,
+  "n_joint_range": [
+    1,
+    6
+  ],
+  "coverage": [
+    "random linear inequalities",
+    "exact equality pairs",
+    "bounds",
+    "joint coupling",
+    "empty domains",
+    "changing contexts",
+    "prefix lengths 0..n-1"
+  ],
+  "exact_match_rate": 1.0,
+  "mismatch_count": 0,
+  "empty_domain_matches": 6146,
+  "by_n_joint": [
+    {
+      "n_joint": 1,
+      "queries": 1667,
+      "mismatches": 0
+    },
+    {
+      "n_joint": 2,
+      "queries": 1667,
+      "mismatches": 0
+    },
+    {
+      "n_joint": 3,
+      "queries": 1667,
+      "mismatches": 0
+    },
+    {
+      "n_joint": 4,
+      "queries": 1667,
+      "mismatches": 0
+    },
+    {
+      "n_joint": 5,
+      "queries": 1666,
+      "mismatches": 0
+    },
+    {
+      "n_joint": 6,
+      "queries": 1666,
+      "mismatches": 0
+    }
+  ],
+  "mismatches": [],
+  "oracle": "independent repeated Fourier-Motzkin exact projection"
+}

@@ -1,78 +1,47 @@
-# RQ1 — Natural-language policy to masked structured action
+# RQ1 — Runtime diagnostics
 
-This folder contains the complete RQ1 evidence package: frozen source-policy
-records, raw run outputs, runner/validator code, a deterministic aggregation
-script, and the final per-case and narrative results.
+This directory contains the archived runtime diagnostics cited in the RQ1 evaluation table: two 10,000-query domain comparisons, 350 fail-closed probes, 1,648 relational-composition queries, and tokenizer transition records. The Qwen3-VL-8B tokenizer record is shared with [RQ4](../RQ4/data/raw/rq4_qwen8b_tokenizer_mask_differential_20260928.json); combined with the TinyLlama tokenizer record here, the two experiments cover 66,313 transitions with no observed false admissions or false rejections.
 
-## Result at a glance
+## Archived evidence
 
-The 55-policy slice contains 25 Robot and 30 IoT policies. In the recorded
-Qwen3-VL-8B, temperature-0.2 run, 54/55 Contracts passed structural/type
-validation, 50 actions were emitted, and 47/50 emitted actions satisfied the
-independent source-rule oracle. Three compiled masks admitted four unsafe
-catalog candidates; the full report separates compile rejection, empty domains,
-selected-action violations, and exact-mask accuracy.
+- `data/raw/continuous_domain_differential_10000.json`: continuous PPDC differential result, 10,000 queries, independent repeated Fourier–Motzkin projection oracle.
+- `data/raw/policy2sample_differential_10000.json`: DSL-to-sample differential result, 10,000 queries, independent interval/enumeration oracle.
+- `data/raw/fail_closed_350_cases.json`: seven fail-closed categories, 50 probes each.
+- `data/raw/joint_projection_1648_queries.json`: joint composition before projection; independent projection has false admissions in 824 queries; joint composition eliminates them in the same batch.
+- `data/raw/tinyllama_tokenizer_differential_33160.json`: tokenizer-only differential at TinyLlama revision `5243d15`; no language-model inference was run for this check.
+- The Qwen3-VL-8B transition record, including its full-mask latency measurements, is in `RQ4/data/raw/rq4_qwen8b_tokenizer_mask_differential_20260928.json`.
 
-## Where to find things
+## Rebuild the paper-table counts
 
-- `data/rq1b_final_eval_input_55_2026-09-24.jsonl`: frozen 55-policy input.
-- `data/raw/`: only the canonical 15 prior rows, the final IO07 row, and the
-  fixed-seed 39-row completion output.
-- `code/remote_rq1_true_e2e_8b.py`: core Contract generation, typed validation,
-  source-rule oracle, finite-catalog comparison, and trie-masked action choice.
-- `code/action_trie_kv_rollback_demo.py` and
-  `code/rq1_masked_action_decoder.py`: the minimal trie/logit primitives used
-  by this RQ1 runner; unrelated development scenarios are omitted.
-- `code/remote_rq1_true_e2e_8b_remaining38.py`: completion runner. It loads the
-  frozen corpus, builds the 38 previously uncovered fixtures plus the IO06
-  replacement, and supports `--only-case` for a focused diagnostic.
-- `code/remote_rq1_io07_compound_guard_regression.py`: runner for the IO07
-  compound-guard case used in the final corpus result.
-- `code/aggregate_rq1_true_e2e_55case.py`: rebuilds the merged JSON, CSV, and
-  both Markdown reports from the frozen input and raw result files.
-- `results/`: final merged output and paper-oriented reports.
+From `RQ1/`, run `python3 code/summarize_runtime_diagnostics.py`. It reads the archived summaries and prints the diagnostic counts, including the cross-folder tokenizer total.
 
-## Reproduce the reported aggregation
+## Reproduce the archived deterministic checks
 
-Python 3.10+ is sufficient for the offline aggregation; it uses only the
-standard library:
+From `RQ1/`, run the continuous-domain check with Python 3.10+:
 
 ```bash
-python3 code/aggregate_rq1_true_e2e_55case.py
+python3 code/run_differential_correctness.py
 ```
 
-Run this command from `RQ1/` (or pass the script path while preserving its
-relative `data/` and `results/` layout). It asserts that the merged result has
-exactly one row for every frozen policy ID.
-
-## Re-run the 39-row completion inference
-
-Inference requires a compatible `llama-cpp-python` build with Qwen3-VL support
-and a separately obtained Qwen3-VL-8B GGUF model. Set the model path without
-editing the package:
+Run the DSL and fail-closed checks with:
 
 ```bash
-export QWEN3_VL_8B_MODEL=/path/to/Qwen3VL-8B-Instruct-Q8_0.gguf
-python3 code/remote_rq1_true_e2e_8b_remaining38.py \
-  --temperature 0.2 --seed 20261006 \
-  --output data/raw/rq1_true_e2e_8b_remaining39_20261006.json
+PYTHONPATH=code python3 code/run_policy2sample_differential.py
+PYTHONPATH=code python3 code/run_policy2sample_failure_modes.py
 ```
 
-The recorded experiment ran on a dual-RTX-3090 host; inference dependencies and
-model weights are intentionally not bundled. Re-running model inference is
-stochastic and need not reproduce byte-identical Contract text. The included
-raw outputs are precisely the run records contributing to the final 55 rows.
+These commands regenerate result files under `code/` from their recorded seeds. The relational-composition JSON is the archived controlled batch; its query-level rows are retained in the raw file.
 
-## Important interpretation
+To repeat the TinyLlama tokenizer check, obtain `tokenizer.json` from the upstream model repository at revision `5243d15` and use the RQ4 tokenizer runner with the archived runtime modules:
 
-The oracle evaluates the source-rule semantics directly against the fixed
-Context and each catalog action; it does not inspect the generated Contract or
-mask. A syntactically/type-valid Contract can still be semantically wrong, so
-selected-action compliance and candidate-mask soundness are reported
-separately. Empty predicted domains count as no-action/failure, not as successful
-task completion. This experiment has no simulator replay or task-goal metric.
+```bash
+curl -L https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/5243d15/tokenizer.json -o /tmp/tinyllama-tokenizer.json
+python3 ../RQ4/code/scaling/run_real_tokenizer_differential.py \
+  --source-root ../RQ4/code/scaling/runtime \
+  --tokenizer-json /tmp/tinyllama-tokenizer.json \
+  --tokenizer-source "TinyLlama 1.1B Chat tokenizer.json, revision 5243d15" \
+  --seed 20260929 --transitions-per-case 100 --random-candidates 40 \
+  --output data/raw/reproduced_tinyllama_tokenizer_differential.json
+```
 
-The 55 frozen semantic references were produced by two independent human
-annotators; a third human reviewer adjudicated disagreements. The exact
-pre-adjudication field agreement reported in the paper ranges from 56.4% to
-92.7%. The frozen input records the final adjudicated reference for each rule.
+The [upstream TinyLlama model repository](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0) identifies the model under Apache-2.0; the tokenizer fixture is not included in this package. The test uses its tokenizer only, not its model weights.

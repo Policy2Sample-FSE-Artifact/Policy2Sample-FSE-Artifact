@@ -1,0 +1,28 @@
+{
+  "experiment": "policy2sample_dsl_to_sample_differential",
+  "seed": 20260917,
+  "queries": 10000,
+  "policy_counts": {
+    "generated": 2928,
+    "executable": 2836
+  },
+  "status_counts": {
+    "EXACT": 9463,
+    "EMPTY": 537
+  },
+  "exact_match_rate": 1.0,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "oracle": "independent closed-form interval/enumeration oracle, not Realizer or Z3",
+  "coverage": [
+    "direction enum",
+    "context guards",
+    "human cap",
+    "fragile cap",
+    "policy cap",
+    "motion budget",
+    "positive-distance task constraint",
+    "empty domains",
+    "prefixes"
+  ]
+}
