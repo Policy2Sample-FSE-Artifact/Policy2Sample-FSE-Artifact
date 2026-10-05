@@ -2,6 +2,10 @@
 
 This directory contains the archived runtime diagnostics cited in the RQ1 evaluation table: two 10,000-query domain comparisons, 350 fail-closed probes, 1,648 relational-composition queries, and tokenizer transition records. The Qwen3-VL-8B tokenizer record is shared with [RQ4](../RQ4/data/raw/rq4_qwen8b_tokenizer_mask_differential_20260928.json); combined with the TinyLlama tokenizer record here, the two experiments cover 66,313 transitions with no observed false admissions or false rejections.
 
+## Human annotation provenance
+
+The frozen 55-case source-rule references were annotated independently by two human annotators. One separate human reviewer resolved disagreements before the references were frozen. The case input is `data/rq1b_final_eval_input_55_2026-09-24.jsonl`.
+
 ## Archived evidence
 
 - `data/raw/continuous_domain_differential_10000.json`: continuous PPDC differential result, 10,000 queries, independent repeated Fourier–Motzkin projection oracle.
