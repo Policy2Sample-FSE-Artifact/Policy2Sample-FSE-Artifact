@@ -12,10 +12,6 @@ This guide maps the evaluation claims to the included evidence and gives offline
 
 ## Annotation provenance
 
-The frozen RQ1 references were annotated independently by two human annotators and disagreements were adjudicated by a third human reviewer, as described in the paper. The 55-case input contains the final adjudicated references.
-
-## Annotation provenance
-
 The frozen RQ1 references were annotated independently by two human annotators; one separate human reviewer resolved disagreements. The 55-case input contains the final reviewed references.
 
 ## Inference requirements
