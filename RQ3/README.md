@@ -1,6 +1,7 @@
 # RQ3 — Safety and task utility
 
-This artifact presents the Hard-IoT-96 controlled workload and its results.
+This artifact presents the controlled Hard-IoT-96 workload and a case-level
+Robot30 run on NVIDIA RTX 5090.
 
 Hard-IoT-96 uses a study-authored finite action lattice and abstract energy
 coefficients (`6h + 4d + 5w + 8e ≤ B`) to compare the four methods under a
@@ -22,6 +23,28 @@ controlled workload.
 | Policy2Sample | 96/96 (100%) | 88/96 (91.7%) | 1362.4 ms |
 
 The energy model uses study-authored abstract load units.
+
+## Robot30 five-seed case-level run (RTX 5090)
+
+This supplementary run evaluates the same study-authored set of 30 controlled
+Robot30 cases with Prompt-only, AgentSpec, and Policy2Sample over five paired
+seeds. It reports case-level outcomes alongside seed-level STC, safety, call,
+and latency summaries. The run used Qwen3-VL-32B-Instruct-Q8_0 at temperature
+0.2; AgentSpec used `llm_self_examine` at depth 8.
+
+| Method | Final safety | Safe task completion | Mean calls | Mean latency |
+|---|---:|---:|---:|---:|
+| Prompt-only | 32.67% | 32.67 ± 1.49% | 1.00 | 1698.04 ± 6.83 ms |
+| AgentSpec | 100% | 48.00 ± 1.83% | 3.61 ± 0.22 | 6344.14 ± 453.90 ms |
+| Policy2Sample | 100% | 56.67 ± 0.00% | 1.00 | 1686.27 ± 7.77 ms |
+
+The report defines the metric fields and aggregation procedure. The raw JSON
+contains 30 case records and all 450 method–case–seed runs.
+
+Robot30 files:
+
+- Case-level report: [`results/robot30_rtx5090/Robot30_5090_case_results.md`](results/robot30_rtx5090/Robot30_5090_case_results.md)
+- Raw case and run records: [`data/raw/robot30_rtx5090/robot30_depth8_five_seed_30_case_records.json`](data/raw/robot30_rtx5090/robot30_depth8_five_seed_30_case_records.json)
 
 Files:
 
