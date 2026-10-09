@@ -7,7 +7,7 @@ disabled.
 
 ## Request-level latency
 
-| Workload | Safety disabled (mean, ms) | Policy2Sample (mean, ms) | Paired mean difference | Mean output tokens |
+| Workload | No-Safety-Enforcement (mean, ms) | Policy2Sample (mean, ms) | Paired mean difference | Mean output tokens |
 |---|---:|---:|---:|---:|
 | Robot Core-30 | 707.85 | 741.28 | +33.44 ms (+4.72%) | 41.9 → 41.9 |
 | Hard-IoT Core-30 | 422.89 | 506.88 | +83.99 ms (+19.86%) | 28.0 → 33.5 |

@@ -1,14 +1,14 @@
 # RQ4 — End-to-end action-generation latency
 
-This directory archives the 8B system-level latency experiment comparing a
-structured-generation configuration with runtime safety constraints disabled
-to Policy2Sample. The archived runner labels this arm `schema-only`; it uses
-the same structured action grammar without the safety mask. The reported run is
-`v3`.
+This directory archives the 8B system-level latency experiment comparing the
+No-Safety-Enforcement baseline with Policy2Sample. The baseline uses the same
+structured action grammar with runtime safety constraints disabled. The
+paper-facing label is `No-Safety-Enforcement`; machine-readable field names
+remain unchanged. The reported run is `v3`.
 
 ## Final result
 
-| Workload | Schema-only mean / P50 / P95 (ms) | Policy2Sample mean / P50 / P95 (ms) | Mean overhead |
+| Workload | No-Safety-Enforcement mean / P50 / P95 (ms) | Policy2Sample mean / P50 / P95 (ms) | Mean overhead |
 |---|---:|---:|---:|
 | Robot Core-30 v2 | 707.85 / 758.27 / 780.58 | 741.28 / 780.07 / 867.32 | +33.44 ms / +4.72% |
 | Hard-IoT Core-30 | 422.89 / 422.78 / 440.96 | 506.88 / 508.57 / 533.92 | +83.99 ms / +19.86% |
