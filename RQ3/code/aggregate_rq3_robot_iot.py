@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw"
 OUT = ROOT / "results"
+PAPER_METHODS = ("prompt_only", "agentspec", "policy2sample")
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -83,6 +84,8 @@ def iot_exports() -> list[dict]:
     case_rows = []
     diagnostic_rows = []
     for r in d["rows"]:
+        if r["method"] not in PAPER_METHODS:
+            continue
         row = {
             "case_id": r["case_id"], "complexity": r["complexity"], "rho_bin": r["rho_bin"],
             "method": r["method"], "first_admissible": r["first_admissible"],
@@ -100,7 +103,8 @@ def iot_exports() -> list[dict]:
     overall: list[dict] = []
     by_complexity: list[dict] = []
     by_rho: list[dict] = []
-    for method, s in d["summary"].items():
+    for method in PAPER_METHODS:
+        s = d["summary"][method]
         overall.append({
             "method": method, "n": s["n"], "first_admissible": s["first_admissible"],
             "final_admissible": s["final_admissible"], "task_success": s["task_success"],

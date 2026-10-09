@@ -4,17 +4,19 @@ This artifact presents the controlled Hard-IoT-96 workload and a case-level
 Robot30 run on NVIDIA RTX 5090.
 
 Hard-IoT-96 uses a study-authored finite action lattice and abstract energy
-coefficients (`6h + 4d + 5w + 8e ≤ B`) to compare the four methods under a
-controlled workload.
+coefficients (`6h + 4d + 5w + 8e ≤ B`) for the paper-reported three-method
+comparison under a controlled workload.
 
 ## Hard-IoT-96 structural-complexity workload
 
 - Qwen3-VL-32B-Instruct-Q8_0, greedy decoding, temperature 0, fixed seed
-  20260929; run 2026-09-29; 96 main cases × four methods = 384 method/case rows.
+  20260929; run 2026-09-29. The paper-facing comparison covers 96 main cases
+  and the three methods reported in the paper.
 - 24 cases each in C1–C4, crossed with loose/medium/tight admissible-domain
   retention bins (8 cases per cell). The complete discrete action space has
   3,888 candidates.
-- Methods: Prompt-only, AgentSpec (up to two repairs), and Policy2Sample.
+- Paper-reported methods: Prompt-only, AgentSpec (up to two repairs), and
+  Policy2Sample.
 
 | Method | Safe-action yield | Safe task completion | Mean generation latency |
 |---|---:|---:|---:|

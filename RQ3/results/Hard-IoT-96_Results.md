@@ -1,10 +1,10 @@
 # Hard-IoT-96 results
 
-This report summarizes the controlled IoT workload used for the RQ3 table.
-The run uses Qwen3-VL-32B-Instruct-Q8_0 with greedy decoding and one fixed
-seed. It contains 96 cases evaluated by four methods on a finite action lattice
-of 3,888 configurations. The energy coefficients are study-authored abstract
-load units.
+This report summarizes the three methods reported in the paper's RQ3 table
+for the controlled IoT workload. The run uses Qwen3-VL-32B-Instruct-Q8_0 with
+greedy decoding and one fixed seed. The comparison covers 96 cases on a finite
+action lattice of 3,888 configurations. The energy coefficients are
+study-authored abstract load units.
 
 | Method | Safe-action yield | Safe task completion | Mean generation latency |
 |---|---:|---:|---:|

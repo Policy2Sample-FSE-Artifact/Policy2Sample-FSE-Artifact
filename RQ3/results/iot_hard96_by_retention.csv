@@ -2,9 +2,6 @@ method,retention_bin,n,first_admissible,final_admissible,task_success,mean_model
 prompt_only,loose,32,25,25,21,1,1266.3708334293915
 prompt_only,medium,32,22,22,21,1,1270.4376947367564
 prompt_only,tight,32,22,22,21,1,1371.706812584307
-schema_only,loose,32,25,25,21,1,1369.7454948414816
-schema_only,medium,32,23,23,21,1,1373.8995287567377
-schema_only,tight,32,22,22,21,1,1367.727447548532
 agentspec,loose,32,25,31,25,1.3125,1827.0410437107785
 agentspec,medium,32,23,30,24,1.4375,2001.39933306491
 agentspec,tight,32,22,29,28,1.4375,1995.194320610608
